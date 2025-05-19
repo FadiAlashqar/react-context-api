@@ -1,8 +1,19 @@
 import React from 'react'
+import MainNav from './MainNav'
 
 const PostsPage = () => {
     return (
-        <header>CONTEXT API</header>
+        <>
+            <header><MainNav /></header>
+
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <h1>POST PAGE</h1>
+                    </div>
+                </div>
+            </div>
+        </>
     )
 }
 

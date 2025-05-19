@@ -1,4 +1,5 @@
 import React from 'react'
+import MainNav from './MainNav';
 
 const PostsList = () => {
     const posts = [
@@ -10,21 +11,29 @@ const PostsList = () => {
 
 
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <ul>
-                        {posts.map((post) => {
-                            <li key={post.id}>
-                                <h3>{post.title}</h3>
-                                <p>{post.content}</p>
-                                <p><em>{post.category}</em></p>
-                            </li>
-                        })}
-                    </ul>
+        <>
+            <header><MainNav /></header>
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <h1 className='mx-3'>POST LIST</h1>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12">
+                        <ul>
+                            {posts.map((post) => {
+                                return <li key={post.id}>
+                                    <h3>{post.title}</h3>
+                                    <p>{post.content}</p>
+                                    <p><em>{post.category}</em></p>
+                                </li>
+                            })}
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

@@ -1,3 +1,7 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PostsList from "./components/PostsList";
+import PostsPage from "./components/PostsPage";
 
 function App() {
 
@@ -9,7 +13,12 @@ function App() {
   ];
   return (
     <>
-      <h1>CIAO</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<PostsPage />} />
+          <Route path="/PostList" element={<PostsList />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
